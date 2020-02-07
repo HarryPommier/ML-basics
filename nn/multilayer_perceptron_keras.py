@@ -29,7 +29,8 @@ x_test /= 255
 #Model
 model = Sequential()
 model.add(Dense(units=64, activation='relu', input_dim=num_features))
-model.add(Dense(units=32, activation='relu', input_dim=num_features))
+model.add(Dense(units=32, activation='relu'))
+model.add(Dense(units=16, activation='relu'))
 model.add(Dense(units=num_classes, activation='softmax'))
 model.compile(loss='categorical_crossentropy',
               optimizer='sgd',
